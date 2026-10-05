@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amanda Allinger – om mig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Hoppa till innehållet</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Huvudmeny">
+        <a href="#top" class="logo" aria-label="Amanda Allinger, till början"
+          >AA.</a
+        >
+        <ul class="nav-links">
+          <li><a href="#about">Om mig</a></li>
+          <li><a href="#skills">Kunskaper</a></li>
+          <li><a href="#journey">Min resa</a></li>
+          <li>
+            <a
+              class="nav-contact"
+              href="mailto:amanda-allinger@student.chasacademy.se"
+              >Kontakt <span aria-hidden="true">↗</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="name">
+        <div class="hero-copy">
+          <p class="greeting">Hej, jag heter</p>
+          <h1 id="name">Amanda<br />Allinger<span>.</span></h1>
+          <p class="hero-title">
+            <span class="visually-hidden">UX-student och webbutvecklare.</span>
+            <span class="typewriter" aria-hidden="true">UX-student</span>
+          </p>
+          <button class="animation-button" type="button" hidden>
+            Pausa textanimation
+          </button>
+        </div>
+        <figure class="hero-image">
+          <img
+            src="bilder/hero-image.png"
+            alt="Porträtt av Amanda Allinger med grafiska former"
+            width="1536"
+            height="1024" />
+        </figure>
+      </section>
+
+      <section id="about" class="section about" aria-labelledby="about-heading">
+        <p class="section-label">01 / Om mig</p>
+        <div class="about-layout">
+          <figure class="about-image">
+            <img
+              src="bilder/Illustration-2.png"
+              alt="Illustration av Amanda som arbetar med design och kod vid sitt skrivbord"
+              width="1536"
+              height="1024"
+              loading="lazy" />
+          </figure>
+          <div class="about-text">
+            <h2 id="about-heading">Lite om mig</h2>
+            <p class="lead">
+              Webbutvecklare i grunden.<br />UX-student just nu.
+            </p>
+            <p>
+              Jag har en bakgrund inom webbutveckling för e-handel, med
+              erfarenhet av både frontend och backend.
+            </p>
+            <button
+              class="about-button"
+              type="button"
+              aria-expanded="true"
+              aria-controls="about-more"
+              hidden>
+              <span class="button-icon" aria-hidden="true">+</span>
+              <span class="button-label">Visa mindre</span>
+            </button>
+            <div id="about-more" class="about-more">
+              <div class="about-more-inner">
+                <div class="about-more-content">
+                  <p>
+                    Nu studerar jag till UX Engineer - fördjupar mig i UX,
+                    interaktionsdesign och tillgänglighet. Jag tar med mig
+                    utvecklingsbakgrunden när jag lär mig mer om hur digitala
+                    upplevelser fungerar för dem som använder dem.
+                  </p>
+                  <a class="text-link" href="https://github.com/allingers"
+                    >Se min GitHub <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="section skills"
+        aria-labelledby="skills-heading">
+        <p class="section-label">02 / Kunskaper &amp; erfarenheter</p>
+        <h2 id="skills-heading">Det jag tar med mig</h2>
+        <div class="tabs" aria-label="Välj område" hidden>
+          <button
+            type="button"
+            id="tab-knowledge"
+            aria-controls="panel-knowledge">
+            Kunskaper
+          </button>
+          <button
+            type="button"
+            id="tab-strengths"
+            aria-controls="panel-strengths">
+            Styrkor
+          </button>
+          <button type="button" id="tab-growth" aria-controls="panel-growth">
+            Utvecklingsområden
+          </button>
+        </div>
+        <div class="tab-panels">
+          <section
+            id="panel-knowledge"
+            class="tab-panel"
+            aria-labelledby="tab-knowledge">
+            <h3>Kunskaper</h3>
+            <ul class="skills-list">
+              <li>
+                <h4>Frontend</h4>
+                <p>HTML, CSS, JavaScript och Next.js.</p>
+              </li>
+              <li>
+                <h4>Backend &amp; verktyg</h4>
+                <p>Node.js, MongoDB, Git och GitHub.</p>
+              </li>
+            </ul>
+          </section>
+          <section
+            id="panel-strengths"
+            class="tab-panel"
+            aria-labelledby="tab-strengths">
+            <h3>Styrkor</h3>
+            <ul class="skills-list">
+              <li>
+                <h4>Bygga för webben</h4>
+                <p>En teknisk grund i både frontend och backend.</p>
+              </li>
+              <li>
+                <h4>Se helheten</h4>
+                <p>
+                  Erfarenhet av fullstack och e-handel från min
+                  webbutvecklarutbildning.
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section
+            id="panel-growth"
+            class="tab-panel"
+            aria-labelledby="tab-growth">
+            <h3>Utvecklingsområden</h3>
+            <ul class="skills-list">
+              <li>
+                <h4>UX</h4>
+                <p>Fördjupa min förståelse för användarnas behov.</p>
+              </li>
+              <li>
+                <h4>Tillgänglighet</h4>
+                <p>Lära mig mer om att bygga för olika förutsättningar.</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section
+        id="journey"
+        class="section journey"
+        aria-labelledby="journey-heading">
+        <p class="section-label">03 / Bakgrund</p>
+        <h2 id="journey-heading">Min resa</h2>
+        <ol class="timeline">
+          <li>
+            <time datetime="2022">2022</time>
+            <div>
+              <h3>Första steget in i webbutveckling</h3>
+              <p>Jag började utbildningen till webbutvecklare inom e-handel.</p>
+            </div>
+          </li>
+          <li class="timeline-internship">
+            <div>
+              <h3>
+                LIA på
+                <a href="https://www.hiveandfive.se/">Hive &amp; Five ↗</a>
+              </h3>
+            </div>
+          </li>
+          <li class="timeline-internship">
+            <div>
+              <h3>LIA på <a href="https://adoveo.com/">Adoveo ↗</a></h3>
+            </div>
+          </li>
+          <li>
+            <time datetime="2024">2024</time>
+            <div>
+              <h3>Examen som webbutvecklare inom E-handel</h3>
+              <p>
+                (med toppbetyg
+                <span aria-label="blinkning">😉)</span>
+              </p>
+            </div>
+          </li>
+          <li class="timeline-courses">
+            <div>
+              <h3>Breddat perspektiv</h3>
+              <p>
+                Läst kurser inom bland annat psykosocial arbetsmiljö och
+                sociologi.
+              </p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026">2026</time>
+            <div>
+              <h3>Nästa steg: UX Engineer</h3>
+              <p>
+                Jag började min nuvarande utbildning och bygger vidare med UX,
+                interaktionsdesign och tillgänglighet.
+              </p>
+              <span class="current-label">Här är jag nu</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section id="contact" class="contact" aria-labelledby="contact-heading">
+        <div class="contact-inner">
+          <p class="section-label">04 / Kontakt</p>
+          <div class="contact-intro">
+            <h2 id="contact-heading">Säg hej!</h2>
+            <p>
+              Har du en fråga eller vill du komma i kontakt med mig? Skriv några
+              rader.
+            </p>
+          </div>
+          <a
+            class="contact-button"
+            href="mailto:amanda-allinger@student.chasacademy.se"
+            >Kontakta mig <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Amanda Allinger</p>
+      <div class="footer-links">
+        <a href="https://github.com/allingers">Min GitHub ↗</a
+        ><a href="#top">Till toppen ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
