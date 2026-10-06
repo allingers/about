@@ -4,7 +4,6 @@ const aboutMore = document.querySelector("#about-more");
 const aboutLabel = document.querySelector(".button-label");
 aboutMore.classList.add("is-collapsible");
 aboutMore.inert = true;
-aboutMore.setAttribute("aria-hidden", "true");
 aboutButton.hidden = false;
 aboutButton.setAttribute("aria-expanded", "false");
 aboutLabel.textContent = "Mer om mig";
@@ -13,7 +12,6 @@ aboutButton.addEventListener("click", () => {
   const isOpen = aboutButton.classList.toggle("is-open");
   aboutMore.classList.toggle("is-open", isOpen);
   aboutButton.setAttribute("aria-expanded", String(isOpen));
-  aboutMore.setAttribute("aria-hidden", String(!isOpen));
   aboutMore.inert = !isOpen;
 
   if (isOpen) {
@@ -127,7 +125,7 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) reveal(entry.target);
     });
-  }, { threshold: 0, rootMargin: "0px 0px -24px 0px" });
+  }, { rootMargin: "0px 0px -24px 0px" });
 
   function reveal(element) {
     element.classList.remove("reveal-pending");

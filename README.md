@@ -38,7 +38,7 @@ Semantiska element, en `h1`, rubriknivåer i ordning, riktiga knappar/länkar,
 listor och alt-texter på båda bilderna. Synliga fokusramar och en hopplänk
 underlättar tangentbordsnavigation.
 
-Utfällningen använder `aria-expanded`, `aria-controls`, `aria-hidden` och
+Utfällningen använder `aria-expanded`, `aria-controls` och
 `inert`. Flikarna använder `tablist`, `tab`, `tabpanel` och `aria-selected`.
 Skärmläsare får en fast version av yrkestitlarna i stället för varje bokstav.
 `prefers-reduced-motion` ger statiska titlar och tar bort animationer.
