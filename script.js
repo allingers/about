@@ -34,13 +34,13 @@ function selectTab(index) {
   tabs.forEach((tab, tabIndex) => {
     const isSelected = index === tabIndex;
     tab.setAttribute("aria-selected", String(isSelected));
-    tab.tabIndex = isSelected ? 0 : -1;
     panels[tabIndex].hidden = !isSelected;
   });
 }
 
 tabs.forEach((tab, index) => {
   tab.setAttribute("role", "tab");
+  // Alla flikar nås med Tab. Enter eller mellanslag aktiverar knappen.
   panels[index].setAttribute("role", "tabpanel");
   panels[index].tabIndex = 0;
   tab.addEventListener("click", () => selectTab(index));

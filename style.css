@@ -297,6 +297,12 @@ p {
   border-radius: 24px;
   background: transparent;
   font-size: 0.9rem;
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+.about-button:hover,
+.about-button:focus-visible {
+  background: #ebc1b1;
+  border-color: var(--accent);
 }
 .button-icon {
   place-items: center;
@@ -306,8 +312,10 @@ p {
   border-radius: 50%;
   transition: transform 400ms ease, background 200ms ease;
 }
-.about-button:hover .button-icon {
-  background: var(--surface);
+.about-button:hover .button-icon,
+.about-button:focus-visible .button-icon {
+  background: #f7f7f5;
+  border-color: var(--accent);
 }
 .about-button.is-open .button-icon {
   transform: rotate(45deg);
@@ -591,7 +599,7 @@ footer {
   html {
     scroll-behavior: auto;
   }
-  .nav-contact, .text-link span, .button-icon, .about-more.is-collapsible, .tabs button, .contact-button, .scroll-reveal {
+  .nav-contact, .text-link span, .about-button, .button-icon, .about-more.is-collapsible, .tabs button, .contact-button, .scroll-reveal {
     transition: none;
   }
   .tab-panel[role="tabpanel"] {
