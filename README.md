@@ -1,6 +1,6 @@
-# Om mig – Amanda Allinger
+# Beskrivning
 
-En personlig sida som presenterar mig, mina kunskaper och min väg från webbutveckling till UX Engineer. Sidan är byggd med HTML, CSS och vanilla JavaScript.
+En personlig om-mig-sida skapad som en examinerande uppgift i min utbildning till UX Engineer. Sidan presenterar mig, kunskaper och utbildningsbakgrund - byggd med HTML, CSS och vanilla JavaScript.
 
 ## Interaktioner
 
