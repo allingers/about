@@ -1,4 +1,4 @@
-// Mer om mig: naturlig höjd animeras i CSS, utan att knappen flyttar sig.
+// Mer om mig
 const aboutButton = document.querySelector(".about-button");
 const aboutMore = document.querySelector("#about-more");
 const aboutLabel = document.querySelector(".button-label");
@@ -21,10 +21,12 @@ aboutButton.addEventListener("click", () => {
   }
 });
 
-// Flikar: utan JavaScript visas alla tre områden som vanliga sektioner.
+// Flikar
 const tabList = document.querySelector(".tabs");
 const tabs = Array.from(tabList.querySelectorAll("button"));
-const panels = tabs.map((tab) => document.getElementById(tab.getAttribute("aria-controls")));
+const panels = tabs.map((tab) =>
+  document.getElementById(tab.getAttribute("aria-controls")),
+);
 tabList.hidden = false;
 tabList.setAttribute("role", "tablist");
 
@@ -107,7 +109,9 @@ function updateAnimation() {
 
 animationButton.addEventListener("click", () => {
   paused = !paused;
-  animationButton.textContent = paused ? "Starta textanimation" : "Pausa textanimation";
+  animationButton.textContent = paused
+    ? "Starta textanimation"
+    : "Pausa textanimation";
   updateAnimation();
 });
 reducedMotion.addEventListener("change", updateAnimation);
@@ -118,14 +122,17 @@ updateAnimation();
 // Utan stöd för IntersectionObserver eller med minskad rörelse är allt synligt.
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   const revealElements = document.querySelectorAll(
-    ".about-image, .about-text, .section-label, .tabs, .tab-panels, .journey > h2, .timeline li, .contact-button, footer"
+    ".about-image, .about-text, .section-label, .tabs, .tab-panels, .journey > h2, .timeline li, .contact-button, footer",
   );
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) reveal(entry.target);
-    });
-  }, { rootMargin: "0px 0px -24px 0px" });
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) reveal(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -24px 0px" },
+  );
 
   function reveal(element) {
     element.classList.remove("reveal-pending");
@@ -138,7 +145,9 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
       element.classList.add("scroll-reveal", "reveal-pending");
       revealObserver.observe(element);
       // Tangentbordsfokus ska aldrig hamna i osynligt innehåll.
-      element.addEventListener("focusin", () => reveal(element), { once: true });
+      element.addEventListener("focusin", () => reveal(element), {
+        once: true,
+      });
     }
   });
 
