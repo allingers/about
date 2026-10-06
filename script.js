@@ -118,7 +118,7 @@ updateAnimation();
 // Utan stöd för IntersectionObserver eller med minskad rörelse är allt synligt.
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   const revealElements = document.querySelectorAll(
-    ".about-image, .about-text, .section-label, .skills > h2, .tabs, .tab-panels, .journey > h2, .timeline li, .contact-button, footer"
+    ".about-image, .about-text, .section-label, .tabs, .tab-panels, .journey > h2, .timeline li, .contact-button, footer"
   );
 
   const revealObserver = new IntersectionObserver((entries) => {
