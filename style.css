@@ -35,12 +35,6 @@ a:hover {
   text-decoration: underline;
 }
 
-button {
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-
 img {
   display: block;
   width: 100%;
@@ -90,10 +84,6 @@ button:focus-visible,
   transform: translateY(0);
 }
 
-/*
- * SIDANS BREDD
- * Max 1120px bred, med luft längs kanterna.
- */
 .site-header,
 .hero,
 .section,
@@ -103,7 +93,6 @@ footer {
   margin-inline: auto;
 }
 
-/* MENYN HÖGST UPP */
 .nav {
   min-height: 88px;
   display: flex;
@@ -128,7 +117,6 @@ footer {
   font-size: 0.8rem;
 }
 
-/* Kontaktlänken ser ut som en knapp och öppnar mejlprogrammet. */
 .nav-contact {
   display: inline-flex;
   align-items: center;
@@ -163,7 +151,6 @@ footer {
   width: 48%;
   padding-left: clamp(0rem, 2vw, 1.5rem);
   padding-block: 3rem;
-  /* En mjuk ljus skugga gör bokstäverna tydliga över bilden. */
   text-shadow: 0 2px 20px var(--background);
 }
 
@@ -172,8 +159,6 @@ footer {
   margin: 0 0 1.1rem;
 }
 
-/* NAMNET
-   clamp anger minsta storlek, flexibel storlek och största storlek. */
 h1 {
   font-size: clamp(3.5rem, 6.5vw, 5.5rem);
   font-weight: 700;
@@ -187,7 +172,6 @@ h1 > span {
   color: var(--accent);
 }
 
-/* Texten som skrivs och suddas ut. */
 .hero-title {
   font-size: clamp(1.1rem, 1.8vw, 1.4rem);
   min-height: 1.7em;
@@ -195,7 +179,6 @@ h1 > span {
   color: var(--accent);
 }
 
-/* Det lilla strecket efter den animerade texten. */
 .typewriter::after {
   content: "";
   display: inline-block;
@@ -205,7 +188,6 @@ h1 > span {
   vertical-align: -0.08em;
 }
 
-/* Pausknappen för textanimationen. */
 .animation-button:not([hidden]) {
   display: block;
 }
@@ -221,7 +203,7 @@ h1 > span {
   text-underline-offset: 3px;
 }
 
-/* Länkar med en liten pil. */
+/* pil - länkar */
 .text-link {
   display: inline-flex;
   gap: 1.2rem;
@@ -247,7 +229,6 @@ h1 > span {
   position: relative;
 }
 
-/* Bildens kanter tonas bort, så att ingen hård ram syns. */
 .hero-image img {
   aspect-ratio: 3 / 2;
   object-fit: cover;
@@ -255,7 +236,6 @@ h1 > span {
   mask-image: radial-gradient(ellipse at center, black 35%, transparent 72%);
 }
 
-/* Tona ner vänstersidan bakom texten, utan att ändra bildfilen. */
 .hero-image::after {
   content: "";
   position: absolute;
@@ -315,7 +295,6 @@ p {
   border-radius: 12px;
 }
 
-/* Texten leder sektionen. Bilden är ett mindre inslag bredvid. */
 .about-text {
   grid-area: text;
   min-width: 0;
@@ -348,7 +327,6 @@ p {
   max-width: 52ch;
 }
 
-/* Knappen Mer om mig. */
 .about-button:not([hidden]) {
   display: inline-flex;
 }
@@ -384,9 +362,6 @@ p {
   transform: rotate(45deg);
 }
 
-/* UTFÄLLNINGEN
-   JavaScript lägger till is-open när texten ska visas.
-   Grid-raden växer från 0fr till 1fr så att öppningen blir mjuk. */
 .about-more {
   display: grid;
   grid-template-rows: 1fr;
@@ -461,7 +436,6 @@ p {
   animation: panel-in 230ms ease;
 }
 
-/* Innehållet i varje flik, fördelat på tre kolumner. */
 .skills-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -481,7 +455,6 @@ p {
   margin: 0;
 }
 
-/* En kort intoning när man byter flik. */
 @keyframes panel-in {
   from {
     opacity: 0;
@@ -494,7 +467,7 @@ p {
   }
 }
 
-/* TIDSLINJEN – MIN RESA */
+/* TIDSLINJEN */
 .timeline {
   list-style: none;
   margin: 1rem 0 0;
@@ -518,7 +491,6 @@ p {
   padding: 0 0 2rem 2rem;
 }
 
-/* Prickarna längs linjen. */
 .timeline li > div::before {
   content: "";
   position: absolute;
@@ -539,12 +511,10 @@ p {
   color: var(--muted);
 }
 
-/* LIA och kurser saknar årtal och ligger därför i kolumn två. */
 .timeline .timeline-detail > div {
   grid-column: 2;
 }
 
-/* Mindre, grågröna prickar för LIA och kurser. */
 .timeline .timeline-detail > div::before {
   width: 6px;
   height: 6px;
@@ -584,8 +554,6 @@ footer p {
   gap: 1.5rem;
 }
 
-/* KONTAKT
-   En grön bakgrund skiljer kontaktsektionen från resten av sidan. */
 .contact {
   background: #293f36;
   color: #f7f7f5;
@@ -635,15 +603,12 @@ footer p {
   background: #f4dbc5;
 }
 
-/* INTONING VID SCROLL
-   JavaScript lägger till klasserna. 650ms är animationens längd. */
 .scroll-reveal {
   transition:
     opacity 650ms ease,
     transform 650ms cubic-bezier(0.2, 0.65, 0.3, 1);
 }
 
-/* Startläge: osynligt och 18px längre ner. */
 .reveal-pending {
   opacity: 0;
   transform: translateY(18px);
