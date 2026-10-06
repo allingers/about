@@ -1,8 +1,7 @@
 # Amanda Allinger – om mig
 
-En personlig sida byggd med semantisk HTML, separat CSS och vanilla JavaScript.
-Öppna `index.html` i webbläsaren. Inga ramverk eller installationer behövs.
 
+<<<<<<< HEAD
 ## Innehåll
 
 - Hero med namn, porträtt och titlarna UX-student och webbutvecklare.
@@ -56,3 +55,5 @@ det publika GitHub-repot.
 
 Skriv din egen processreflektion i Canvas: vad var svårast, vad ändrade du
 utifrån kodgranskningen (och vad valde du bort), och vad skulle du göra härnäst?
+=======
+>>>>>>> f717d6670ec42ed69102a9b7aa2bea86880c83a8
