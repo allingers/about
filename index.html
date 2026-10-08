@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Gochi+Hand&family=Outfit:wght@500..600&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
@@ -34,17 +34,17 @@
     </header>
     <main id="main">
       <section class="hero" aria-labelledby="name">
-        <div class="hero-copy">
+        <header class="hero-copy">
           <p class="greeting">Hej, jag heter</p>
           <h1 id="name">Amanda<br />Allinger<span>.</span></h1>
           <p class="hero-title">
-            <span class="visually-hidden">UX-student och webbutvecklare.</span>
-            <span class="typewriter" aria-hidden="true">UX-student</span>
+            <span class="visually-hidden">Webbutvecklare och UX Engineer-student.</span>
+            <span class="typewriter" aria-hidden="true">Webbutvecklare</span>
           </p>
           <button class="animation-button" type="button" hidden>
             Pausa textanimation
           </button>
-        </div>
+        </header>
         <figure class="hero-image">
           <img
             src="bilder/hero-image.png"
@@ -100,77 +100,80 @@
             </div>
           </div>
         </div>
-        <div id="skills" class="skills">
-          <div class="tabs" aria-label="Välj område" hidden>
-            <button
-              type="button"
-              id="tab-knowledge"
-              aria-controls="panel-knowledge">
-              Kunskaper
-            </button>
-            <button
-              type="button"
-              id="tab-strengths"
-              aria-controls="panel-strengths">
-              Styrkor
-            </button>
-            <button type="button" id="tab-growth" aria-controls="panel-growth">
-              Utvecklingsområden
-            </button>
-          </div>
-          <div class="tab-panels">
-            <section
-              id="panel-knowledge"
-              class="tab-panel"
-              aria-labelledby="tab-knowledge">
-              <h3>Kunskaper</h3>
-              <ul class="skills-list">
-                <li>
-                  <h4>Frontend</h4>
-                  <p>HTML, CSS, JavaScript och Next.js.</p>
-                </li>
-                <li>
-                  <h4>Backend &amp; verktyg</h4>
-                  <p>Node.js, MongoDB, Git och GitHub.</p>
-                </li>
-              </ul>
-            </section>
-            <section
-              id="panel-strengths"
-              class="tab-panel"
-              aria-labelledby="tab-strengths">
-              <h3>Styrkor</h3>
-              <ul class="skills-list">
-                <li>
-                  <h4>Bygga för webben</h4>
-                  <p>En teknisk grund i både frontend och backend.</p>
-                </li>
-                <li>
-                  <h4>Se helheten</h4>
-                  <p>
-                    Erfarenhet av fullstack och e-handel från min
-                    webbutvecklarutbildning.
-                  </p>
-                </li>
-              </ul>
-            </section>
-            <section
-              id="panel-growth"
-              class="tab-panel"
-              aria-labelledby="tab-growth">
-              <h3>Utvecklingsområden</h3>
-              <ul class="skills-list">
-                <li>
-                  <h4>UX</h4>
-                  <p>Fördjupa min förståelse för användarnas behov.</p>
-                </li>
-                <li>
-                  <h4>Tillgänglighet</h4>
-                  <p>Lära mig mer om att bygga för olika förutsättningar.</p>
-                </li>
-              </ul>
-            </section>
-          </div>
+      </section>
+      <section id="skills" class="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" class="visually-hidden">
+          Kunskaper och erfarenheter
+        </h2>
+        <div class="tabs" aria-label="Välj område" hidden>
+          <button
+            type="button"
+            id="tab-knowledge"
+            aria-controls="panel-knowledge">
+            Kunskaper
+          </button>
+          <button
+            type="button"
+            id="tab-strengths"
+            aria-controls="panel-strengths">
+            Styrkor
+          </button>
+          <button type="button" id="tab-growth" aria-controls="panel-growth">
+            Utvecklingsområden
+          </button>
+        </div>
+        <div class="tab-panels">
+          <section
+            id="panel-knowledge"
+            class="tab-panel"
+            aria-labelledby="tab-knowledge">
+            <h3>Kunskaper</h3>
+            <ul class="skills-list">
+              <li>
+                <h4>Frontend</h4>
+                <p>HTML, CSS, JavaScript och Next.js.</p>
+              </li>
+              <li>
+                <h4>Backend &amp; verktyg</h4>
+                <p>Node.js, MongoDB, Git och GitHub.</p>
+              </li>
+            </ul>
+          </section>
+          <section
+            id="panel-strengths"
+            class="tab-panel"
+            aria-labelledby="tab-strengths">
+            <h3>Styrkor</h3>
+            <ul class="skills-list">
+              <li>
+                <h4>Bygga för webben</h4>
+                <p>En teknisk grund i både frontend och backend.</p>
+              </li>
+              <li>
+                <h4>Se helheten</h4>
+                <p>
+                  Erfarenhet av fullstack och e-handel från min
+                  webbutvecklarutbildning.
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section
+            id="panel-growth"
+            class="tab-panel"
+            aria-labelledby="tab-growth">
+            <h3>Utvecklingsområden</h3>
+            <ul class="skills-list">
+              <li>
+                <h4>UX</h4>
+                <p>Fördjupa min förståelse för användarnas behov.</p>
+              </li>
+              <li>
+                <h4>Tillgänglighet</h4>
+                <p>Lära mig mer om att bygga för olika förutsättningar.</p>
+              </li>
+            </ul>
+          </section>
         </div>
       </section>
 
@@ -207,7 +210,7 @@
               <h3>Examen som webbutvecklare inom E-handel</h3>
               <p>
                 (med toppbetyg
-                <span aria-label="blinkning">😉)</span>
+                <span role="img" aria-label="blinkning">😉</span>)
               </p>
             </div>
           </li>
@@ -253,10 +256,11 @@
     </main>
     <footer>
       <p>Amanda Allinger</p>
-      <div class="footer-links">
-        <a href="https://github.com/allingers">Min GitHub ↗</a
-        ><a href="#top">Till toppen ↑</a>
-      </div>
+      <nav class="footer-links" aria-label="Länkar i sidfoten">
+        <a href="https://github.com/allingers">Min GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/amandaallinger/">Min LinkedIn ↗</a>
+        <a href="#top">Till toppen ↑</a>
+      </nav>
     </footer>
   </body>
 </html>

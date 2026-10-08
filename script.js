@@ -9,8 +9,7 @@ aboutButton.setAttribute("aria-expanded", "false");
 aboutLabel.textContent = "Mer om mig";
 
 aboutButton.addEventListener("click", () => {
-  const isOpen = aboutButton.classList.toggle("is-open");
-  aboutMore.classList.toggle("is-open", isOpen);
+  const isOpen = aboutMore.classList.toggle("is-open");
   aboutButton.setAttribute("aria-expanded", String(isOpen));
   aboutMore.inert = !isOpen;
 
@@ -45,7 +44,7 @@ tabs.forEach((tab, index) => {
   panels[index].tabIndex = 0;
   tab.addEventListener("click", () => selectTab(index));
   tab.addEventListener("keydown", (event) => {
-    let nextIndex = index;
+    let nextIndex;
     if (event.key === "ArrowRight") {
       nextIndex = (index + 1) % tabs.length;
     } else if (event.key === "ArrowLeft") {
@@ -68,7 +67,7 @@ selectTab(0);
 const typewriter = document.querySelector(".typewriter");
 const animationButton = document.querySelector(".animation-button");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const titles = ["UX-student", "Webbutvecklare"];
+const titles = ["Webbutvecklare", "UX Engineer-student"];
 let titleIndex = 0;
 let characterIndex = titles[0].length;
 let deleting = true;
@@ -98,7 +97,7 @@ function updateAnimation() {
   window.clearTimeout(timer);
   animationButton.hidden = reducedMotion.matches;
   if (reducedMotion.matches) {
-    typewriter.textContent = "UX-student · Webbutvecklare";
+    typewriter.textContent = titles.join(" och ") + ".";
   } else {
     typewriter.textContent = titles[titleIndex].slice(0, characterIndex);
     if (!paused && !document.hidden) {
