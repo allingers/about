@@ -20,6 +20,18 @@ aboutButton.addEventListener("click", () => {
   }
 });
 
+// Förhandsbilden kan stängas utan att flytta fokus eller muspekaren.
+const projectPreview = document.querySelector(".project-preview");
+projectPreview.addEventListener("mouseenter", () => {
+  projectPreview.classList.remove("is-dismissed");
+});
+projectPreview.addEventListener("focusin", () => {
+  projectPreview.classList.remove("is-dismissed");
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") projectPreview.classList.add("is-dismissed");
+});
+
 // Flikar
 const tabList = document.querySelector(".tabs");
 const tabs = Array.from(tabList.querySelectorAll("button"));
@@ -37,9 +49,9 @@ function selectTab(index) {
   });
 }
 
+// Alla flikar nås med Tab. Enter eller mellanslag aktiverar knappen.
 tabs.forEach((tab, index) => {
   tab.setAttribute("role", "tab");
-  // Alla flikar nås med Tab. Enter eller mellanslag aktiverar knappen.
   panels[index].setAttribute("role", "tabpanel");
   panels[index].tabIndex = 0;
   tab.addEventListener("click", () => selectTab(index));
@@ -63,7 +75,7 @@ tabs.forEach((tab, index) => {
 });
 selectTab(0);
 
-// Skriv, pausa, sudda och byt titel. Skärmläsare får en separat, fast text.
+// Skriv, pausa, sudda och byt titel. Skärmläsare får separat text.
 const typewriter = document.querySelector(".typewriter");
 const animationButton = document.querySelector(".animation-button");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -117,7 +129,7 @@ reducedMotion.addEventListener("change", updateAnimation);
 document.addEventListener("visibilitychange", updateAnimation);
 updateAnimation();
 
-// Tona in innehåll en gång när det scrollas in i bild.
+// Tona in innehåll (endast gång när det scrollas in i bild)
 // Utan stöd för IntersectionObserver eller med minskad rörelse är allt synligt.
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   const revealElements = document.querySelectorAll(
@@ -139,7 +151,6 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
   }
 
   revealElements.forEach((element) => {
-    // Dölj inte innehåll som redan syns, exempelvis efter en omladdning.
     if (element.getBoundingClientRect().top >= window.innerHeight) {
       element.classList.add("scroll-reveal", "reveal-pending");
       revealObserver.observe(element);
