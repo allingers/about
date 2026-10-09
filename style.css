@@ -236,17 +236,7 @@ h1 {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.text-link {
-  gap: 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-.text-link span {
-  transition: transform 200ms ease;
-}
-.text-link:hover span {
-  transform: translateY(3px);
-}
+
 .hero-image {
   justify-self: center;
   width: min(100%, 980px);
@@ -434,7 +424,7 @@ p {
   animation: panel-in 230ms ease;
 }
 .skills-list {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   margin: 1.2rem 0 0;
 }
